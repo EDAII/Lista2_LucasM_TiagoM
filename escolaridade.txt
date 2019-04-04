@@ -1,0 +1,5 @@
+Ensino Fundamental
+Ensino Medio
+Ensino Superior
+Pos Graduação
+Mestrado

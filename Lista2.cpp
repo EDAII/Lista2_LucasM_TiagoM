@@ -8,14 +8,11 @@ class Pessoa{
 
         int Idade;
         string Nome;
-        string Sexo;
         string CPF;
-        string RG;
         double Peso;
         double Altura;
         string Estado_Civil;
-        string Cidade;
-        string Estado;
+        string Endereco;
         string Nacionalidade;
         string Escolaridade;
         double Renda;
@@ -28,20 +25,17 @@ class Pessoa{
 
         }
 
-        Pessoa(int Idade, string Nome, string Sexo, string CPF, string RG, double Peso, double Altura,
-                        string Estado_Civil, string Cidade, string Estado, string Nacionalidade,
+        Pessoa(int Idade, string Nome, string CPF, double Peso, double Altura,
+                        string Estado_Civil, string Endereco, string Nacionalidade,
                         string Escolaridade, double Renda){
 
             this->Idade = Idade;
             this->Nome = Nome;
-            this->Sexo = Sexo;
             this->CPF = CPF;
-            this->RG = RG;
             this->Peso = Peso;
             this->Altura = Altura;
             this->Estado_Civil = Estado_Civil;
-            this->Cidade = Cidade;
-            this->Estado = Estado;
+            this->Endereco = Endereco;
             this->Nacionalidade = Nacionalidade;
             this->Escolaridade = Escolaridade;
             this->Renda = Renda;
