@@ -4,10 +4,11 @@ using namespace std;
 
 int main(){
 
-    vector<int> idade;
+    vector<string> idade;
     vector<string> nome;
     vector<string> cpf;
     vector<string> altura;
+    vector<string> peso;
     vector<string> estado_civil;
     vector<pair<string, string>> ceps;
     vector<string> nacionalidade;
@@ -93,11 +94,28 @@ int main(){
     }
 
     arquivo8.close();
+    ifstream arquivo9("./Lista_informacoes/lista_pesos.txt");
+
+     while(getline(arquivo9 ,linha)){
+        peso.push_back(linha);
+    }
+
+    arquivo9.close();
+    ifstream arquivo10("./Lista_informacoes/lista_idade.txt");
+
+     while(getline(arquivo10 ,linha)){
+        idade.push_back(linha);
+    }
+
+    arquivo9.close();
 
     for (int i=0; i < 5; i++) {
         srand(clock());
 
         int pos;
+
+        pos = rand() % idade.size();
+        cout << idade[pos] << endl;
 
         pos = rand() % nome.size();
         cout << nome[pos] << endl;
@@ -105,8 +123,8 @@ int main(){
         pos = rand() % cpf.size();
         cout << cpf[pos] << endl;
 
-        pos = rand() % altura.size();
-        cout << altura[pos] << endl;
+        pos = rand() % peso.size();
+        cout << peso[pos] << endl;
 
         pos = rand() % altura.size();
         cout << altura[pos] << endl;
