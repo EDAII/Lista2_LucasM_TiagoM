@@ -158,11 +158,5 @@ int main(){
 
     teste = selection_sort_estavel(teste);
 
-    for(int i=0; i<teste.size(); i++){
-        cout << teste.at(i).Idade << endl;
-        cout << teste.at(i).Nome << endl;
-
-    }
-
     return 0;
 }
