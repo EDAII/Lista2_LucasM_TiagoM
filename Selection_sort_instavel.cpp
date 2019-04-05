@@ -151,5 +151,11 @@ vector<Pessoa> ler_arquivo(){
 
 int main(){
 
+    vector<Pessoa> teste;
+
+    teste = ler_arquivo();
+
+    teste = selection_sort_instavel(teste);
+
     return 0;
 }

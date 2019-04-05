@@ -109,7 +109,7 @@ int main(){
 
     arquivo9.close();
 
-    for (int i=0; i < 5; i++) {
+    for (int i=0; i < 100; i++) {
         srand(clock());
 
         int pos;
