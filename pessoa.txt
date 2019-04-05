@@ -1,0 +1,50 @@
+Fiona Fontes
+357.033.314-04
+1.80
+1.53
+Casado
+Osasco/SP	Jaguaribe	Rua Maria Graça da Silveira
+GL - Greenland
+Mestrado
+25700
+$
+Zidane Pinto
+144.714.281-01
+1.92
+1.73
+Solteiro
+São Paulo/SP	Casa Verde	Avenida Professora Ida Kolb, 225 	 Condomínio Edifício Porto Búzios
+NG - Nigéria
+Ensino Superior
+21600
+$
+Godo Canto
+883.828.243-90
+1.59
+1.95
+Viuvo
+Brasília/DF	Riacho Fundo II	QN 26 Conjunto 10
+VU - Vanuatu
+Ensino Superior
+36200
+$
+Sofia Valente
+726.060.514-67
+1.90
+1.56
+Casado
+Guarulhos/SP	Parque das Nações	Rua Júlio Morilla
+PF - Polinésia Francesa
+Mestrado
+40100
+$
+Rosalinda Gouveia
+403.467.807-05
+1.75
+1.70
+Casado
+Belo Horizonte/MG	Conjunto Taquaril	Rua São Carlos
+TO - Tonga
+Ensino Medio
+3000
+$

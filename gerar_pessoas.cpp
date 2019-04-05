@@ -2,57 +2,132 @@
 
 using namespace std;
 
-class Pessoa{
-    public:
-        int Idade; // idade_aleat.txt
-        string Nome; // nomes_aleat.txt
-        string CPF; // cpfs_aleat.txt
-        double Peso; // pesos_aleat.txt
-        double Altura; //alturas_aleat.txt
-        string Estado_Civil; //est_civil.txt
-        string Endereco; //lista_ceps.txt
-        string Nacionalidade; //lista_paises.txt
-        string Escolaridade; //escolaridade.txt
-        double Renda; //renda_aleat.txt
-
-        Pessoa(){
-            
-        }
-
-        Pessoa(int Idade, string Nome, string CPF, double Peso, double Altura,
-                        string Estado_Civil, string Endereco, string Nacionalidade,
-                        string Escolaridade, double Renda){
-
-            this->Idade = Idade; 
-            this->Nome = Nome;
-            this->CPF = CPF;
-            this->Peso = Peso;
-            this->Altura = Altura;
-            this->Estado_Civil = Estado_Civil;
-            this->Endereco = Endereco;
-            this->Nacionalidade = Nacionalidade;
-            this->Escolaridade = Escolaridade;
-            this->Renda = Renda;
-        }
-};
-
 int main(){
 
-    int j;
-    vector<Pessoa> pessoas;
-    vector<string> nomes;
-    vector<bool> numeros;
-    vector<string> CPF;
-    Pessoa aux2;
+    vector<int> idade;
+    vector<string> nome;
+    vector<string> cpf;
+    vector<string> altura;
+    vector<string> estado_civil;
+    vector<pair<string, string>> ceps;
+    vector<string> nacionalidade;
+    vector<string> escolaridade;
+    vector<string> renda;
+
+    pair<string,string> aux;
+    string linha;
     string buffer{""};
 
-    ifstream arquivo("nomes_aleat.txt");
+    ifstream arquivo1("./Lista_informacoes/nomes_aleat.txt");
 
-    while(getline(arquivo ,linha)){
-        nomes.push_back(linha);
+    while(getline(arquivo1 ,linha)){
+        nome.push_back(linha);
     }
 
-    ifstream arquivo_num("numeros.txt");
+    arquivo1.close();
+    ifstream arquivo2("./Lista_informacoes/cpfs_aleat.txt");
+
+     while(getline(arquivo2 ,linha)){
+        cpf.push_back(linha);
+    }
+
+    arquivo2.close();
+    ifstream arquivo3("./Lista_informacoes/lista_altura.txt");
+
+     while(getline(arquivo3 ,linha)){
+        altura.push_back(linha);
+    }
+
+    arquivo3.close();
+    ifstream arquivo4("./Lista_informacoes/est_civil.txt");
+
+     while(getline(arquivo4 ,linha)){
+        estado_civil.push_back(linha);
+    }
+
+    arquivo4.close();
+    ifstream arquivo5("./Lista_informacoes/lista_ceps.txt");
+
+    while(getline(arquivo5 ,linha)){
+        
+        buffer = "";
+
+        int j;
+        for(j=0; linha[j] != '\t'; j++){
+            
+            buffer += linha[j];
+        }
+
+        aux.first = buffer;
+
+        buffer = "";
+
+        for(j+=1; linha[j] != '\0'; j++){
+            buffer += linha[j];
+        }
+
+        aux.second = buffer;
+
+        ceps.push_back(aux);
+    }
+
+    arquivo5.close();
+    ifstream arquivo6("./Lista_informacoes/lista_paises.txt");
+
+     while(getline(arquivo6 ,linha)){
+        nacionalidade.push_back(linha);
+    }
+
+    arquivo6.close();
+    ifstream arquivo7("./Lista_informacoes/escolaridade.txt");
+
+     while(getline(arquivo7 ,linha)){
+        escolaridade.push_back(linha);
+    }
+
+    arquivo7.close();
+    ifstream arquivo8("./Lista_informacoes/lista_renda.txt");
+
+     while(getline(arquivo8 ,linha)){
+        renda.push_back(linha);
+    }
+
+    arquivo8.close();
+
+    for (int i=0; i < 5; i++) {
+        srand(clock());
+
+        int pos;
+
+        pos = rand() % nome.size();
+        cout << nome[pos] << endl;
+
+        pos = rand() % cpf.size();
+        cout << cpf[pos] << endl;
+
+        pos = rand() % altura.size();
+        cout << altura[pos] << endl;
+
+        pos = rand() % altura.size();
+        cout << altura[pos] << endl;
+
+        pos = rand() % estado_civil.size();
+        cout << estado_civil[pos] << endl;
+
+        pos = rand() % ceps.size();
+        cout << ceps[pos].second << endl;
+        
+        pos = rand() % nacionalidade.size();
+        cout << nacionalidade[pos] << endl;
+
+        pos = rand() % escolaridade.size();
+        cout << escolaridade[pos] << endl;
+
+        pos = rand() % renda.size();
+        cout << renda[pos] << endl;
+
+        cout << "$" << endl;
+    }
 
     return 0;
 }
