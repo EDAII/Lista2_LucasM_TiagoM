@@ -61,14 +61,11 @@ class Pessoa{
 
             this->Idade = a.Idade;
             this->Nome = a.Nome;
-            this->Sexo = a.Sexo;
             this->CPF = a.CPF;
-            this->RG = a.RG;
             this->Peso = a.Peso;
             this->Altura = a.Altura;
             this->Estado_Civil = a.Estado_Civil;
-            this->Cidade = a.Cidade;
-            this->Estado = a.Estado;
+            this->Endereco = a.Endereco;
             this->Nacionalidade = a.Nacionalidade;
             this->Escolaridade = a.Escolaridade;
             this->Renda = a.Renda;
@@ -77,30 +74,35 @@ class Pessoa{
 
         }
 
+        ~Pessoa(){
+        }
+
 };
 
-void swap(Pessoa a, Pessoa b){
+vector<Pessoa> insert_sort_instavel(vector<Pessoa> a){
 
-    Pessoa temp;
-    temp = a;
-    a = b;
-    b = a;
+    int i, j;
+    Pessoa chave;
 
-}
+    for(i=1; i < a.size(); i++){
 
-void selection_sort_estavel(vector <Pessoa>){
+        chave = a.at(i);
+        j = i - 1;
 
+        while(a.at(j) >= chave && j>=0){
+            a.at(j+1) = a.at(j);
+            j = j-1;
+        }
+
+        a.at(j+1) = chave;
+    }
+
+    return a;
 
 }
 
 
 int main(){
-
-    Pessoa Eu(14), Vc(10);
-
-    Vc = Eu;
-
-    cout << Vc.Idade << endl;
 
     return 0;
 }

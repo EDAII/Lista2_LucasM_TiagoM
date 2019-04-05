@@ -15,6 +15,10 @@ class Pessoa{
         string Escolaridade; //escolaridade.txt
         double Renda; //renda_aleat.txt
 
+        Pessoa(){
+            
+        }
+
         Pessoa(int Idade, string Nome, string CPF, double Peso, double Altura,
                         string Estado_Civil, string Endereco, string Nacionalidade,
                         string Escolaridade, double Renda){
@@ -38,7 +42,7 @@ int main(){
     vector<Pessoa> pessoas;
     vector<string> nomes;
     vector<bool> numeros;
-    vector<string> CPF
+    vector<string> CPF;
     Pessoa aux2;
     string buffer{""};
 
