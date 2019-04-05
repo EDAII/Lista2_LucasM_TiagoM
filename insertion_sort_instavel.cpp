@@ -89,9 +89,9 @@ vector<Pessoa> insert_sort_instavel(vector<Pessoa> a){
         chave = a.at(i);
         j = i - 1;
 
-        while(a.at(j) >= chave && j>=0){
+        while( (j >= 0) && (a.at(j) >= chave) ){
             a.at(j+1) = a.at(j);
-            j = j-1;
+            j--;
         }
 
         a.at(j+1) = chave;
@@ -148,6 +148,12 @@ vector<Pessoa> ler_arquivo(){
 }
 
 int main(){
+
+    vector<Pessoa> teste;
+
+    teste = ler_arquivo();
+
+    teste = insert_sort_instavel(teste);
 
     return 0;
 }

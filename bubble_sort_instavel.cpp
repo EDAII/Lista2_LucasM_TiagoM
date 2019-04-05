@@ -79,16 +79,16 @@ class Pessoa{
 
 };
 
-vector<Pessoa> bubble_sort_estavel(vector<Pessoa> a){
+vector<Pessoa> bubble_sort_instavel(vector<Pessoa> a){
 
-    int i, j;
+    int i, j, cont_swap=0;
+    Pessoa temp;
 
     for(i=0; i < a.size()-1; i++){
 
         for(j=0; j < a.size()-i-1; j++){
             if(a.at(j) >= a.at(j+1)){
-                Pessoa temp;
-
+                cont_swap++;
                 temp = a.at(j);
                 a.at(j) = a.at(j+1);
                 a.at(j+1) = temp;
@@ -96,6 +96,8 @@ vector<Pessoa> bubble_sort_estavel(vector<Pessoa> a){
         }
 
     }
+
+    cout << cont_swap << endl;
 
     return a;
 
@@ -148,6 +150,12 @@ vector<Pessoa> ler_arquivo(){
 }
 
 int main(){
+
+    vector<Pessoa> teste;
+
+    teste = ler_arquivo();
+
+    teste = bubble_sort_instavel(teste);
 
     return 0;
 }

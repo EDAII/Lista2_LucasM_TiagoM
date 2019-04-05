@@ -81,7 +81,8 @@ class Pessoa{
 
 vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
 
-    int i, j, min_indx;
+    int i, j, min_indx, cont_swap=0;
+    Pessoa temp;
 
     for(i=0; i < a.size()-1; i++){
 
@@ -89,15 +90,16 @@ vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
         for(j=i+1; j < a.size(); j++){
             if(a.at(j) < a.at(min_indx)){
                 min_indx=j;
+                cont_swap++;
             }
         }
-
-        Pessoa temp;
 
         temp = a.at(min_indx);
         a.at(min_indx) = a.at(i);
         a.at(i) = temp;
     }
+
+    cout << cont_swap << endl;
 
     return a;
 

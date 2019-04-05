@@ -80,7 +80,7 @@ class Pessoa{
 };
 
 vector<Pessoa> insert_sort_estavel(vector<Pessoa> a){
-
+    
     int i, j;
     Pessoa chave;
 
@@ -89,14 +89,15 @@ vector<Pessoa> insert_sort_estavel(vector<Pessoa> a){
         chave = a.at(i);
         j = i - 1;
 
-        while(a.at(j) > chave && j>=0){
+        
+        while( (j >= 0) && (a.at(j) > chave) ){
             a.at(j+1) = a.at(j);
-            j = j-1;
+            j--;
         }
 
         a.at(j+1) = chave;
     }
-
+    
     return a;
 
 }
@@ -148,6 +149,12 @@ vector<Pessoa> ler_arquivo(){
 }
 
 int main(){
+
+    vector<Pessoa> teste;
+
+    teste = ler_arquivo();
+
+    teste = insert_sort_estavel(teste);
 
     return 0;
 }
