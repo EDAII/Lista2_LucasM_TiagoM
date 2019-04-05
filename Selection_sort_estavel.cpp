@@ -156,8 +156,13 @@ int main(){
 
     teste = ler_arquivo();
 
-    cout << teste.at(0).Nome << endl;
-    cout << teste.at(0).Idade << endl;
+    teste = selection_sort_estavel(teste);
+
+    for(int i=0; i<teste.size(); i++){
+        cout << teste.at(i).Idade << endl;
+        cout << teste.at(i).Nome << endl;
+
+    }
 
     return 0;
 }
