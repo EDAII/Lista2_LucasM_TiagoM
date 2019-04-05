@@ -103,8 +103,61 @@ vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
 
 }
 
+vector<Pessoa> ler_arquivo(){
+
+    vector<Pessoa> aux;
+    Pessoa pessoa;
+    string linha;
+
+    ifstream arquivo("Pessoas.txt");
+
+    while(getline(arquivo, linha)){
+        pessoa.Idade = atoi(linha.c_str());
+
+        getline(arquivo, linha);
+        pessoa.Nome = linha;
+
+        getline(arquivo, linha);
+        pessoa.CPF = linha;
+
+        getline(arquivo, linha);
+        pessoa.Peso = stod(linha.c_str());
+
+        getline(arquivo, linha);
+        pessoa.Altura = stod(linha.c_str());
+
+        getline(arquivo, linha);
+        pessoa.Estado_Civil = linha;
+
+        getline(arquivo, linha);
+        pessoa.Endereco = linha;
+
+        getline(arquivo, linha);
+        pessoa.Nacionalidade = linha;
+
+        getline(arquivo, linha);
+        pessoa.Escolaridade = linha;
+
+        getline(arquivo, linha);
+        pessoa.Renda = stod(linha.c_str());
+
+        getline(arquivo, linha);
+
+        aux.push_back(pessoa);
+    }
+
+    return aux;
+}
+
 
 int main(){
+
+    vector<Pessoa> teste;
+
+    teste = ler_arquivo();
+
+    cout << teste.at(0).Nome << endl;
+    cout << teste.at(0).Idade << endl;
 
     return 0;
 }

@@ -1,0 +1,11 @@
+19
+Lucas
+CPF
+1.54
+4.76
+Estado_Civil
+Endereço
+Nacionalidade
+Escolaridade
+356.67
+$
