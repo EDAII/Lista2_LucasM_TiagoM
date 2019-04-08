@@ -85,6 +85,7 @@ vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
     int swap = 0;
     clock_t Ticks[2];
     int tempo;
+    Pessoa temp;
 
     Ticks[0] = clock(); 
     for(i=0; i < a.size()-1; i++){
@@ -96,8 +97,6 @@ vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
                 swap++;
             }
         }
-
-        Pessoa temp;
 
         temp = a.at(min_indx);
         a.at(min_indx) = a.at(i);
