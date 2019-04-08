@@ -82,6 +82,9 @@ class Pessoa{
 vector<Pessoa> bubble_sort_estavel(vector<Pessoa> a){
 
     int i, j;
+    int swap = 0;
+    clock_t Ticks[2];
+    int tempo;
 
     for(i=0; i < a.size()-1; i++){
 
@@ -92,13 +95,19 @@ vector<Pessoa> bubble_sort_estavel(vector<Pessoa> a){
                 temp = a.at(j);
                 a.at(j) = a.at(j+1);
                 a.at(j+1) = temp;
+
+                swap++;
             }
         }
 
     }
+    Ticks[1] = clock();
+    tempo = ((Ticks[1] - Ticks[0]) * 1000 / CLOCKS_PER_SEC);
+
+    cout << "Swap: " << swap << endl;
+    cout << "Tempo: " << tempo << endl;
 
     return a;
-
 }
 
 vector<Pessoa> ler_arquivo(){

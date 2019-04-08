@@ -82,13 +82,18 @@ class Pessoa{
 vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
 
     int i, j, min_indx;
+    int swap = 0;
+    clock_t Ticks[2];
+    int tempo;
 
+    Ticks[0] = clock(); 
     for(i=0; i < a.size()-1; i++){
 
         min_indx = i;
         for(j=i+1; j < a.size(); j++){
             if(a.at(j) < a.at(min_indx)){
                 min_indx=j;
+                swap++;
             }
         }
 
@@ -98,9 +103,13 @@ vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
         a.at(min_indx) = a.at(i);
         a.at(i) = temp;
     }
+    Ticks[1] = clock();
+    tempo = ((Ticks[1] - Ticks[0]) * 1000 / CLOCKS_PER_SEC);
+
+    cout << "Swap: " << swap << endl;
+    cout << "Tempo: " << tempo << endl;
 
     return a;
-
 }
 
 vector<Pessoa> ler_arquivo(){
