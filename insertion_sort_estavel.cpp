@@ -90,25 +90,22 @@ vector<Pessoa> insert_sort_estavel(vector<Pessoa> a){
     Ticks[0] = clock();
     for(i=1; i < a.size(); i++){
 
-        chave = a.at(i);
+        chave = a[i];
         j = i - 1;
 
-        
-        while( (j >= 0) && (a.at(j) > chave) ){
-            a.at(j+1) = a.at(j);
-            j = j-1;
-
+        while( j >= 0 && a[j] > chave ){
+            a[j+1] = a[j];
             swap++;
             j--;
         }
 
-        a.at(j+1) = chave;
+        a[j+1] = chave;
     }
     Ticks[1] = clock();
     tempo = ((Ticks[1] - Ticks[0]) * 1000 / CLOCKS_PER_SEC);
 
-    cout << "Swap: " << swap << endl;
-    cout << "Tempo: " << tempo << endl;
+    cout << "Quantidade de swaps Insertion Sort estável: " << swap << endl;
+    cout << "Tempo Insertion Sort estável: " << tempo << "ms" << endl;
 
     return a;
 
