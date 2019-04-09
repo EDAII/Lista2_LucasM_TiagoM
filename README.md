@@ -34,6 +34,12 @@ g++ -o prog lista2.cpp
 
 ### Bubble Sort
 
+<img src="https://github.com/EDAII/Lista2_LucasM_TiagoM/blob/master/grafico_bubble_sort.jpeg">
+
 ### Selection Sort
 
+<img src="https://github.com/EDAII/Lista2_LucasM_TiagoM/blob/master/grafico_selection_sort.jpeg">
+
 ### Insertion Sort
+
+<img src="https://github.com/EDAII/Lista2_LucasM_TiagoM/blob/master/grafico_insertion_sort.jpeg">
