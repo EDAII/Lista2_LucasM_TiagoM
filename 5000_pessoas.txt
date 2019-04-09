@@ -1,0 +1,14 @@
+Quantidade de swaps Bubble Sort estavel: 6059081
+Tempo Bubble Sort estável: 1688ms
+Quantidade de swaps Bubble Sort instável: 12382833
+Tempo Bubble Sort instável: 2819ms
+
+Quantidade de swaps Insertion Sort estável: 6059081
+Tempo Insertion Sort estável: 437ms
+Quantidade de swaps Insertion Sort instável: 6324315
+Tempo Insertion Sort instável: 475ms
+
+Quantidade de swaps Selection Sort estável: 16450
+Tempo Selection Sort estável: 285ms
+Quantidade de swaps Selection Sort instável: 282076
+Tempo Selection Sort estável: 298ms

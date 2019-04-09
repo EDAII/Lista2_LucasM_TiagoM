@@ -81,7 +81,8 @@ class Pessoa{
 
 vector<Pessoa> bubble_sort_estavel(vector<Pessoa> a){
 
-    int i, j, cont_swap=0;
+    int i, j;
+    unsigned long long int cont_swap=0;
     Pessoa temp;
     clock_t Ticks[2];
     Ticks[0] = clock();
@@ -110,7 +111,8 @@ vector<Pessoa> bubble_sort_estavel(vector<Pessoa> a){
 
 vector<Pessoa> bubble_sort_instavel(vector<Pessoa> a){
 
-    int i, j, cont_swap=0;
+    int i, j;
+    unsigned long long int cont_swap=0;
     Pessoa temp;
     clock_t Ticks[2];
     Ticks[0] = clock();
@@ -141,7 +143,7 @@ vector<Pessoa> insert_sort_estavel(vector<Pessoa> a){
     
     int i, j;
     Pessoa chave;
-    int swap = 0;
+    unsigned long long int swap = 0;
     clock_t Ticks[2];
     int tempo;
 
@@ -173,7 +175,7 @@ vector<Pessoa> insert_sort_instavel(vector<Pessoa> a){
     
     int i, j;
     Pessoa chave;
-    int swap = 0;
+    unsigned long long int swap = 0;
     clock_t Ticks[2];
     int tempo;
 
@@ -204,7 +206,7 @@ vector<Pessoa> insert_sort_instavel(vector<Pessoa> a){
 vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
 
     int i, j, min_indx;
-    int swap = 0;
+    unsigned long long int swap = 0;
     clock_t Ticks[2];
     int tempo;
     Pessoa temp;
@@ -236,7 +238,7 @@ vector<Pessoa> selection_sort_estavel(vector<Pessoa> a){
 vector<Pessoa> selection_sort_instavel(vector<Pessoa> a){
 
     int i, j, min_indx;
-    int swap = 0;
+    unsigned long long int swap = 0;
     clock_t Ticks[2];
     int tempo;
     Pessoa temp;
