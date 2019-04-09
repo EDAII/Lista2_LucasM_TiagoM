@@ -31,3 +31,9 @@ g++ -o prog lista2.cpp
  * Bubble Sort
  * Selection Sort
  * Insertion Sort
+
+### Bubble Sort
+
+### Selection Sort
+
+### Insertion Sort
