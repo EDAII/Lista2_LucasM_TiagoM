@@ -1,2 +1,0 @@
-Quantidade de swaps Bubble Sort estavel: 9785176483
-Tempo Bubble Sort estável: 5326760ms
